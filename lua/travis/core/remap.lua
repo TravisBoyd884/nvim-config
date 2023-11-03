@@ -1,16 +1,16 @@
 local keymap = vim.api.nvim_set_keymap
 
-local default_opts = { noremap = true, silent = true}
+local default_opts = { noremap = true, silent = true }
 
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- nvim
 keymap("i", "kj", "<Esc>", default_opts)
-keymap("n","<C-s>", "<cmd>w<CR>", default_opts)
-keymap("n","<leader>c", "<cmd>bd<CR>", default_opts)
+keymap("n", "<C-s>", "<cmd>w<CR>", default_opts)
+keymap("n", "<leader>c", "<cmd>bd<CR>", default_opts)
 
 -- nvim-tree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", {noremap = false})
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = false })
 
 -- Lazy.nvim
 keymap("n", "<leader>l", ":Lazy<CR>", default_opts)
@@ -30,3 +30,5 @@ keymap("n", "<S-l>", ":bnext<CR>", default_opts)
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", default_opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", default_opts)
 
+-- Fugitive
+keymap("n", "<leader>g", "<cmd>Git<CR>", default_opts)
