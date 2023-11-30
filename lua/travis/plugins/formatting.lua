@@ -22,6 +22,7 @@ return {
 				cpp = { "clang-format" },
 				c = { "clang-format" },
 				python = { "isort", "black" },
+				tex = { "latexindent" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

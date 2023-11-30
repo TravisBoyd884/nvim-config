@@ -9,11 +9,15 @@
   "conform.nvim": { "branch": "master", "commit": "2c1e852fbf723b7d89b14fd28089472d92edeeb9" },
   "friendly-snippets": { "branch": "main", "commit": "43727c2ff84240e55d4069ec3e6158d74cb534b6" },
   "lazy.nvim": { "branch": "main", "commit": "16603c6917435d8446f7357cb61095138a417085" },
+  "leap.nvim": { "branch": "main", "commit": "b6ae80f8fc9993638608fc1a51c6ab0eeb12618c" },
   "lspkind.nvim": { "branch": "master", "commit": "57610d5ab560c073c465d6faf0c19f200cb67e6e" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "40301e1c74bc0946eece13edf2b1c561cc497491" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "e4f34741daa9cf95de68a603d3e7a6844a69fdf0" },
   "mason.nvim": { "branch": "main", "commit": "eabf6d347fdb75be360d4c0ced1145670a171453" },
   "nvim-cmp": { "branch": "main", "commit": "51260c02a8ffded8e16162dcf41a23ec90cfba62" },
+  "nvim-dap": { "branch": "master", "commit": "9d81c11fd185a131f81841e64941859305f6c42d" },
+  "nvim-dap-python": { "branch": "master", "commit": "37b4cba02e337a95cb62ad1609b3d1dccb2e5d42" },
+  "nvim-dap-ui": { "branch": "master", "commit": "34160a7ce6072ef332f350ae1d4a6a501daf0159" },
   "nvim-lsp-file-operations": { "branch": "master", "commit": "1e0ffa0acc92f88f9f2b68df47ccbe1917653a42" },
   "nvim-lspconfig": { "branch": "master", "commit": "d0467b9574b48429debf83f8248d8cee79562586" },
   "nvim-tree.lua": { "branch": "master", "commit": "7e3c0bee7b246ca835d5f7453db6fa19de359bab" },
@@ -24,5 +28,6 @@
   "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
   "tokyonight.nvim": { "branch": "main", "commit": "f247ee700b569ed43f39320413a13ba9b0aef0db" },
   "vim-fugitive": { "branch": "master", "commit": "46eaf8918b347906789df296143117774e827616" },
-  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" }
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
+  "vimtex": { "branch": "master", "commit": "2ee33217ba76cb875429ceabd2d99c2f59fdfe11" }
 }

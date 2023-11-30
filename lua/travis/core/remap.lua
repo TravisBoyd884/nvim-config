@@ -3,11 +3,14 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- nvim
 keymap("i", "kj", "<Esc>", default_opts)
 keymap("n", "<C-s>", "<cmd>w<CR>", default_opts)
 keymap("n", "<leader>c", "<cmd>bd<CR>", default_opts)
+keymap("n", "j", "gj", default_opts)
+keymap("n", "k", "gk", default_opts)
 
 -- nvim-tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = false })
@@ -32,3 +35,10 @@ keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", default_opts)
 
 -- Fugitive
 keymap("n", "<leader>g", "<cmd>Git<CR>", default_opts)
+
+-- Debugging
+keymap("n", "<leader>b", "<cmd>:lua require'dap'.toggle_breakpoint()<CR>", default_opts)
+keymap("n", "<F5>", "<cmd>:lua require'dap'.continue()<CR>", default_opts)
+keymap("n", "<F10>", "<cmd>:lua require'dap'.step_over()<CR>", default_opts)
+keymap("n", "<F11>", "<cmd>:lua require'dap'.step_into()<CR>", default_opts)
+keymap("n", "<F12>", "<cmd>:lua require'dap'.step_out()<CR>", default_opts)
