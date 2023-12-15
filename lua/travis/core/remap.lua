@@ -11,6 +11,8 @@ keymap("n", "<C-s>", "<cmd>w<CR>", default_opts)
 keymap("n", "<leader>c", "<cmd>bd<CR>", default_opts)
 keymap("n", "j", "gj", default_opts)
 keymap("n", "k", "gk", default_opts)
+keymap("n", "<leader>w", "<cmd>vertical resize +20<CR>", default_opts)
+keymap("n", "<leader>h", "<cmd>vertical resize -20<CR>", default_opts)
 
 -- nvim-tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = false })

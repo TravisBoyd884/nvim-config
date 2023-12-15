@@ -9,3 +9,4 @@ vim.o.shiftwidth = 2
 
 vim.opt.termguicolors = true
 
+vim.o.hidden = true

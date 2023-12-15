@@ -70,7 +70,13 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		-- configure html server
+		-- configure asm server
+		lspconfig["asm_lsp"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		-- configure C/C++ server
 		lspconfig["clangd"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
