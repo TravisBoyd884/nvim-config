@@ -23,6 +23,7 @@ return {
 				c = { "clang-format" },
 				python = { "isort", "black" },
 				tex = { "latexindent" },
+				asm = { "asmfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
