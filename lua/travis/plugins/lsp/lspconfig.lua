@@ -4,7 +4,16 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
+		{ "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
 	},
+	opts = function(_, opts)
+		local format_kinds = opts.format
+
+		opts.format = function(entry, item)
+			format_kinds(entry, item)
+			return require("roobert/tailwindcss-colorizer-cmp.nvim").formatter(entry, item)
+		end
+	end,
 	config = function()
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
@@ -15,6 +24,7 @@ return {
 		local keymap = vim.keymap -- for conciseness
 
 		local opts = { noremap = true, silent = true }
+
 		local on_attach = function(client, bufnr)
 			opts.buffer = bufnr
 
@@ -98,6 +108,17 @@ return {
 		lspconfig["cssls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			settings = {
+				css = { validate = true, lint = {
+					unknownAtRules = "ignore",
+				} },
+				scss = { validate = true, lint = {
+					unknownAtRules = "ignore",
+				} },
+				less = { validate = true, lint = {
+					unknownAtRules = "ignore",
+				} },
+			},
 		})
 
 		-- configure tailwindcss server
