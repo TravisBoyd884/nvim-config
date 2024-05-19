@@ -102,6 +102,14 @@ return {
 		lspconfig["html"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			init_options = {
+				configurationSection = { "html", "css", "javascript" },
+				embeddedLanguages = {
+					css = true,
+					javascript = true,
+				},
+				provideFormatter = true,
+			},
 		})
 
 		-- configure typescript server with plugin
@@ -115,7 +123,7 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			settings = {
-				css = { validate = true, lint = {
+				css = { validate = false, lint = {
 					unknownAtRules = "ignore",
 				} },
 				scss = { validate = true, lint = {
