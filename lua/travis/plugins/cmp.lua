@@ -18,8 +18,10 @@ return {
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
-		require("luasnip").filetype_extend("javascript", { "javascriptreact" })
-		require("luasnip").filetype_extend("javascript", { "html" })
+		luasnip.filetype_extend("javascript", { "javascriptreact" })
+		luasnip.filetype_extend("typescript", { "typescriptreact" })
+		luasnip.filetype_extend("javascript", { "html" })
+		luasnip.filetype_extend("typescriptreact", { "html", "javascript" })
 
 		cmp.setup({
 			completion = {
