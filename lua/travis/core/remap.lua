@@ -18,6 +18,7 @@ keymap("n", "j", "gj", default_opts)
 keymap("n", "k", "gk", default_opts)
 keymap("n", "<leader>w", "<cmd>vertical resize +20<CR>", default_opts)
 keymap("n", "<leader>h", "<cmd>vertical resize -20<CR>", default_opts)
+keymap("n", "<C-n>", ":noh<CR>", default_opts)
 
 -- trouble
 vim.keymap.set("n", "<leader>xx", function()
